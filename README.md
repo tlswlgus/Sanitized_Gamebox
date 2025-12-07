@@ -1,92 +1,77 @@
 # 🎮 Chippy’s GameBox (Sanitized Version)
 
 You can download the full version of our app here:
-👉 **[https://tlswlgus.github.io/Chippy/index.html](https://tlswlgus.github.io/Chippy/index.html)**
+[https://tlswlgus.github.io/Chippy/index.html](https://tlswlgus.github.io/Chippy/index.html)
 
-**Chippy’s GameBox** is a mobile gaming app designed for Android that brings together a collection of fun and fast-paced 2D mini-games starring Chippy, your friendly robot companion!
-
-Each mini-game—like Catch, Dash, and Ping-Pong—is built to be quick, intuitive, and competitive, giving players the thrill of chasing high scores or challenging their friends. With its 8-bit pixel art and retro sound design, Chippy’s GameBox captures that nostalgic arcade vibe while keeping things fresh, casual, and social.
+Chippy’s GameBox is an Android mini-game collection that brings together a set of fun and fast-paced 2D challenges starring Chippy, your small robot companion. Each play session presents three unique mini-games chosen at random, making every run fresh and replayable.
 
 ---
 
 ## 🕹️ Features
 
-### 🎯 Variety & Replayability
+### 🎯 Variety and Replayability
 
-Every session gives you **three unique, non-repeating mini-games** chosen at random.
-This ensures each playthrough feels fresh, unpredictable, and exciting.
+Every session selects three different mini-games without repeating any within the same set. This gives each playthrough a new rhythm.
 
-* Supports **single-player (PvE)** and **dual-player (PvP)** modes
-* **Shared-device** gameplay (fully offline!)
-* Simple, easy-to-learn mechanics backed by smart algorithms
+Supports:
 
----
+* Single-player (PvE)
+* Local two-player mode (PvP)
+* Shared-device play with no internet required
 
-## 🧠 Smart Game Design
+### 🤖 Smart and Simple Game Logic
 
-Examples of algorithms inside Chippy’s GameBox:
+Behind the scenes, Chippy’s GameBox uses lightweight but effective algorithms to improve gameplay.
 
-* **Ping-Pong AI** – Uses proportional control + prediction to track the ball dynamically with human-like imperfection.
-* **Random 3-Game Selector** – Ensures varied gameplay by preventing repetition during a session.
-* **Tic-Tac-Toe AI** – Uses rule-based heuristics for blocking, winning, and optimal move selection.
+Examples:
 
----
-
-## ⚙️ Behind the Fun
-
-Chippy’s GameBox blends retro arcade style with real-time logic to deliver:
-
-* Smooth gameplay at 60 FPS
-* Quick loading
-* Intuitive interactions
-* Balanced difficulty curves
-* Replayability through randomness and scoring
+* Ping-Pong AI uses proportional movement with a touch of randomness to feel less robotic.
+* Random selection system ensures three unique games each session through rejection sampling.
+* Tic-Tac-Toe AI uses rule-based decisions to block, win, or choose strong positions.
 
 ---
 
-## 🚀 Quick Facts
+## ⚙️ Technical Highlights
 
-* 8-bit retro pixel art
-* Nostalgic chiptune-style sound effects
-* Android-based
-* Single & Dual Player modes
-* Fully offline
+Chippy’s GameBox blends simple retro-style art with smooth real-time performance.
+It is designed to run consistently on typical Android devices without lag or long load times.
 
 ---
 
-## 💡 Final Thought
+## 📌 Quick Facts
 
-Chippy’s GameBox is a pocket arcade built with heart, creativity, and smart design.
-Whether alone or with a friend, Chippy brings endless mini-game fun right to your pocket.
+* Art style: 8-bit inspired pixel graphics
+* Sounds: Light retro chiptune-style effects
+* Platform: Android
+* Modes: Single-player and dual-player
+* Works offline
 
 ---
 
-### 🧩 Made with ❤️ by Program Bug Hunters
+## 💡 Summary
+
+Chippy’s GameBox aims to be a small, replayable, pocket-sized arcade. It is simple to understand, fun to repeat, and friendly for casual play sessions with friends. Whether you are playing alone or competing with someone beside you, every round feels a little different.
+
+Created with care by Program Bug Hunters
 
 ---
 
-# 📄 License (MIT License)
+# 📄 License (MIT License with Source Restrictions)
 
 ```
 MIT License
 
 Copyright (c) 2025 Program Bug Hunters
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the “Software”), to deal
-in the Software without restriction, including without limitation the rights
-to use, distribute, and reproduce the compiled application, provided that the
-source code itself is not copied, modified, or distributed.
+Permission is granted to use, install, and distribute the compiled application
+(the APK or exported build) of Chippy’s GameBox.
 
-The above permission is strictly limited to the distributed binary version
-(App/APK) of Chippy’s GameBox. The source code, internal assets, and project
-files are proprietary and may not be copied, modified, reverse engineered,
-or redistributed in any form without explicit written permission from the
-authors.
+Permission is not granted to copy, modify, distribute, or reuse the original
+source code, project files, or internal assets. These materials are considered
+proprietary and remain the property of the authors.
 
-THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY.
+The compiled application is provided "as is" without warranty of any kind,
+including but not limited to implied warranties of merchantability or fitness
+for a particular purpose. In no event shall the authors be liable for damages
+arising from the use of the software.
 ```
----
