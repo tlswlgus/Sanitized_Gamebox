@@ -1,0 +1,71 @@
+[gd_scene load_steps=8 format=3 uid="uid://ghdfau0re7ru"]
+
+[ext_resource type="Script" uid="uid://b0vqdk5ibbec1" path="res://main.gd" id="1_1bvp3"]
+[ext_resource type="Script" uid="uid://h7creq3ploo5" path="res://ball.gd" id="1_h2yge"]
+[ext_resource type="Script" uid="uid://dmaph20hx0iob" path="res://player1.gd" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://bs15vewxd0oxm" path="res://player2.gd" id="2_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://bb4pcqayf5udf" path="res://Yellow_icon.svg" id="3_lquwl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0xm2m"]
+radius = 1.43886
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
+size = Vector2(247, 23)
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_1bvp3")
+
+[node name="background" type="ColorRect" parent="."]
+visible = false
+offset_right = 720.0
+offset_bottom = 1280.0
+color = Color(0, 0, 0, 1)
+
+[node name="Ball" type="CharacterBody2D" parent="."]
+position = Vector2(352, 505)
+scale = Vector2(16, 16)
+script = ExtResource("1_h2yge")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball"]
+position = Vector2(0.125, 0.4375)
+shape = SubResource("CircleShape2D_0xm2m")
+
+[node name="Sprite2D" type="Sprite2D" parent="Ball"]
+position = Vector2(0.121106, 0.437506)
+scale = Vector2(0.014414, 0.0143749)
+texture = ExtResource("3_lquwl")
+
+[node name="Player1" type="CharacterBody2D" parent="."]
+position = Vector2(363, 745)
+script = ExtResource("1_ig7tw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player1"]
+shape = SubResource("RectangleShape2D_h2yge")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player1"]
+
+[node name="Player2" type="CharacterBody2D" parent="."]
+position = Vector2(370, 258)
+script = ExtResource("2_0xm2m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player2"]
+shape = SubResource("RectangleShape2D_h2yge")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player2"]
+
+[node name="Score1" type="Label" parent="."]
+offset_left = 340.0
+offset_top = 657.0
+offset_right = 456.0
+offset_bottom = 680.0
+text = "dgsdgsdfgsfgsr"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Score2" type="Label" parent="."]
+offset_left = 336.0
+offset_top = 336.0
+offset_right = 444.0
+offset_bottom = 359.0
+text = "dgsgessgrsgrs"
+horizontal_alignment = 1

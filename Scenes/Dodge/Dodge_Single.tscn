@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://dl73g5isna4ud"]
+
+[ext_resource type="Script" uid="uid://d201e3otb1j11" path="res://Scripts/Dodge/Dodge_Single.gd" id="1_hvjdw"]
+[ext_resource type="Texture2D" uid="uid://cuwu8m61x2gjg" path="res://Assets/Images/NEXTGAME.png" id="2_opkja"]
+[ext_resource type="Texture2D" uid="uid://cmrqjk7wkywsv" path="res://Assets/Images/PLAYAGAIN.png" id="3_l07no"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_hvjdw")
+
+[node name="next_game" type="TextureButton" parent="."]
+visible = false
+offset_left = 18.0
+offset_top = 788.0
+offset_right = 703.0
+offset_bottom = 902.0
+texture_normal = ExtResource("2_opkja")
+
+[node name="play_again" type="TextureButton" parent="."]
+offset_left = 22.0
+offset_top = 658.0
+offset_right = 707.0
+offset_bottom = 772.0
+texture_normal = ExtResource("3_l07no")
+
+[node name="Game_Round" type="Label" parent="."]
+offset_left = 44.0
+offset_top = 245.0
+offset_right = 660.0
+offset_bottom = 398.0
+theme_override_colors/font_color = Color(0.85098, 0.85098, 0.85098, 1)
+theme_override_font_sizes/font_size = 112
+text = "Catch"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[connection signal="pressed" from="next_game" to="." method="_on_next_game_pressed"]
+[connection signal="pressed" from="play_again" to="." method="_on_play_again_pressed"]

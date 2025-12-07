@@ -1,0 +1,99 @@
+[gd_scene load_steps=10 format=3 uid="uid://ghdfau0re7ru"]
+
+[ext_resource type="Script" uid="uid://b0vqdk5ibbec1" path="res://main.gd" id="1_1bvp3"]
+[ext_resource type="Script" uid="uid://h7creq3ploo5" path="res://ball.gd" id="1_h2yge"]
+[ext_resource type="Script" uid="uid://dmaph20hx0iob" path="res://player1.gd" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://bs15vewxd0oxm" path="res://player2.gd" id="2_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://bb4pcqayf5udf" path="res://Yellow_icon.svg" id="3_lquwl"]
+[ext_resource type="Texture2D" uid="uid://55h8rf2o0ejk" path="res://Solid_white.svg" id="5_7mycd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0xm2m"]
+radius = 1.43886
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
+size = Vector2(247, 23)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_7mycd"]
+b = Vector2(0, 1280)
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_1bvp3")
+
+[node name="Ball" type="CharacterBody2D" parent="."]
+position = Vector2(352, 625)
+scale = Vector2(16, 16)
+script = ExtResource("1_h2yge")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball"]
+position = Vector2(0.125, 0.4375)
+shape = SubResource("CircleShape2D_0xm2m")
+
+[node name="Sprite2D" type="Sprite2D" parent="Ball"]
+position = Vector2(0.121106, 0.437506)
+scale = Vector2(0.014414, 0.0143749)
+texture = ExtResource("3_lquwl")
+
+[node name="Player1" type="CharacterBody2D" parent="." groups=["paddle"]]
+position = Vector2(363, 1204)
+script = ExtResource("1_ig7tw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player1"]
+shape = SubResource("RectangleShape2D_h2yge")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player1"]
+position = Vector2(7.62939e-06, -1.41263e-05)
+scale = Vector2(246, 22)
+texture = ExtResource("5_7mycd")
+
+[node name="Player2" type="CharacterBody2D" parent="." groups=["paddle"]]
+position = Vector2(370, 69)
+script = ExtResource("2_0xm2m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player2"]
+shape = SubResource("RectangleShape2D_h2yge")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player2"]
+position = Vector2(0, 4.76837e-07)
+scale = Vector2(246, 22)
+texture = ExtResource("5_7mycd")
+
+[node name="Score1" type="Label" parent="."]
+modulate = Color(1, 1, 1, 0.215686)
+offset_left = 263.0
+offset_top = 1105.0
+offset_right = 463.0
+offset_bottom = 1177.0
+theme_override_font_sizes/font_size = 52
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Score2" type="Label" parent="."]
+modulate = Color(1, 1, 1, 0.215686)
+offset_left = 270.0
+offset_top = 95.0
+offset_right = 470.0
+offset_bottom = 167.0
+theme_override_font_sizes/font_size = 52
+text = "0"
+horizontal_alignment = 1
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." groups=["wall"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("SegmentShape2D_7mycd")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." groups=["wall"]]
+position = Vector2(720, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+shape = SubResource("SegmentShape2D_7mycd")
+
+[node name="StartLabel" type="Label" parent="."]
+offset_left = 268.0
+offset_top = 547.0
+offset_right = 452.0
+offset_bottom = 589.0
+theme_override_font_sizes/font_size = 30
+text = "Press to Play"
+horizontal_alignment = 1

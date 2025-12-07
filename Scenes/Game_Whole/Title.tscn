@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://qmlk2hiugxav"]
+
+[ext_resource type="Script" uid="uid://dtgng1dajhb5f" path="res://Scripts/Game_Whole/title.gd" id="1_qg246"]
+[ext_resource type="Texture2D" uid="uid://h3hntspf7240" path="res://Assets/Images/START GAME.png" id="5_qg246"]
+[ext_resource type="Texture2D" uid="uid://byirsmyqxqrx8" path="res://Assets/Images/STARTGAMEPRESSED.png" id="6_0kjvr"]
+
+[node name="Main Screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qg246")
+metadata/_edit_vertical_guides_ = [360.0, 180.0, 540.0]
+metadata/_edit_horizontal_guides_ = [668.0]
+
+[node name="StartSingle_Button" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 818.0
+offset_right = 705.0
+offset_bottom = 932.0
+texture_normal = ExtResource("5_qg246")
+texture_pressed = ExtResource("6_0kjvr")
+
+[connection signal="pressed" from="StartSingle_Button" to="." method="_on_start_single_button_pressed"]

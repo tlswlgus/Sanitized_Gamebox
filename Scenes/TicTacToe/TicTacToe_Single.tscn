@@ -1,0 +1,213 @@
+[gd_scene load_steps=7 format=3 uid="uid://bd81l21wmtl7l"]
+
+[ext_resource type="Script" uid="uid://dc7evckalok6d" path="res://Scripts/TicTacToe/tictactoe_single.gd" id="1_sn5xo"]
+[ext_resource type="Texture2D" uid="uid://bnrr2g8nsqht8" path="res://Assets/Images/XO.png" id="3_vrruj"]
+[ext_resource type="Texture2D" uid="uid://cuwu8m61x2gjg" path="res://Assets/Images/NEXTGAME.png" id="5_m3bul"]
+[ext_resource type="Texture2D" uid="uid://cmrqjk7wkywsv" path="res://Assets/Images/PLAYAGAIN.png" id="6_xeacn"]
+[ext_resource type="AudioStream" uid="uid://coie3pgxutcs0" path="res://Assets/Sounds/TicTacToe.wav" id="7_vdftl"]
+
+[sub_resource type="AudioStreamWAV" id="AudioStreamWAV_m3bul"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_sn5xo")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 137.0
+offset_top = 554.0
+offset_right = 278.0
+offset_bottom = 698.0
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 285.0
+offset_top = 554.0
+offset_right = 426.0
+offset_bottom = 698.0
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 432.0
+offset_top = 553.0
+offset_right = 573.0
+offset_bottom = 697.0
+
+[node name="ColorRect4" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 137.0
+offset_top = 702.0
+offset_right = 278.0
+offset_bottom = 846.0
+
+[node name="ColorRect5" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 283.0
+offset_top = 702.0
+offset_right = 424.0
+offset_bottom = 846.0
+
+[node name="ColorRect6" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 432.0
+offset_top = 702.0
+offset_right = 573.0
+offset_bottom = 846.0
+
+[node name="ColorRect7" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 138.0
+offset_top = 849.0
+offset_right = 279.0
+offset_bottom = 993.0
+
+[node name="ColorRect8" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 286.0
+offset_top = 849.0
+offset_right = 427.0
+offset_bottom = 993.0
+
+[node name="ColorRect9" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 432.0
+offset_top = 848.0
+offset_right = 573.0
+offset_bottom = 992.0
+
+[node name="Round" type="Label" parent="."]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 323.0
+offset_right = 610.0
+offset_bottom = 590.0
+theme_override_colors/font_color = Color(0.85098, 0.85098, 0.85098, 1)
+theme_override_font_sizes/font_size = 96
+text = "Round 1 / 3"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Turn" type="Label" parent="."]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 1174.0
+offset_right = 667.0
+offset_bottom = 1295.0
+theme_override_colors/font_color = Color(0.85098, 0.85098, 0.85098, 1)
+theme_override_font_sizes/font_size = 112
+text = "Your Turn!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 143.0
+offset_top = 568.0
+offset_right = 571.0
+offset_bottom = 996.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
+
+[node name="Button" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("3_vrruj")
+
+[node name="Button2" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("3_vrruj")
+
+[node name="Button3" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("3_vrruj")
+
+[node name="Button4" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("3_vrruj")
+
+[node name="Button5" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("3_vrruj")
+
+[node name="Button6" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("3_vrruj")
+
+[node name="Button7" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("3_vrruj")
+
+[node name="Button8" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("3_vrruj")
+
+[node name="Button9" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("3_vrruj")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_vdftl")
+autoplay = true
+bus = &"Music"
+
+[node name="Audio_Count" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
+
+[node name="Countdown" type="Label" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 500.0
+offset_right = 701.0
+offset_bottom = 949.0
+theme_override_font_sizes/font_size = 200
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="CountdownTimer" type="Timer" parent="."]
+
+[node name="playerSound" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamWAV_m3bul")
+bus = &"SFX"
+
+[node name="next_game" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 1058.0
+offset_right = 726.0
+offset_bottom = 1172.0
+texture_normal = ExtResource("5_m3bul")
+
+[node name="play_again" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 1067.0
+offset_right = 709.0
+offset_bottom = 1181.0
+texture_normal = ExtResource("6_xeacn")
+
+[node name="Game_Round" type="Label" parent="."]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 23.0
+offset_right = 676.0
+offset_bottom = 176.0
+theme_override_colors/font_color = Color(0.85098, 0.85098, 0.85098, 1)
+theme_override_font_sizes/font_size = 112
+text = "Catch"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[connection signal="pressed" from="next_game" to="." method="_on_next_game_pressed"]
+[connection signal="pressed" from="play_again" to="." method="_on_play_again_pressed"]

@@ -1,0 +1,47 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Chippy's Gamebox"
+run/main_scene="uid://qmlk2hiugxav"
+config/features=PackedStringArray("4.5", "Mobile")
+config/layer_1=""
+
+[audio]
+
+buses/default_bus_layout=""
+
+[autoload]
+
+GlobalState="*res://Scripts/Game_Whole/global_state.gd"
+GlobalAudio="*res://Scripts/Game_Whole/global_audio.gd"
+AchievementManager="*res://Scripts/Game_Whole/AchievementManager.gd"
+
+[display]
+
+window/size/viewport_width=720
+window/size/viewport_height=1380
+window/stretch/mode="viewport"
+window/handheld/orientation=1
+
+[dotnet]
+
+project/assembly_name="ApDev"
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+renderer/rendering_method="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
